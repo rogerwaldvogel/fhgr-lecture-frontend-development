@@ -1,4 +1,5 @@
 <template>
+  <!-- https://nuxt.com/docs/guide/directory-structure/pages -->
   <NuxtLayout name="default-layout">
     <UCard class="mt-10">
       <template #header>
