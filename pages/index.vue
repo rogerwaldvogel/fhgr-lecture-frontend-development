@@ -13,12 +13,33 @@
       <UButton icon="i-heroicons-book-open" to="https://ui.nuxt.com" target="_blank">Open Nuxt UI Documentation
       </UButton>
     </UCard>
+    <UCard class="mt-10">
+      <UTable id="data-table" :rows="tableData"/>
+    </UCard>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
+const tableData = ref([]);
+const client = useSupabaseClient();
+
+await useAsyncData('data', async () => {
+  const {data, error} = await client.from('data')
+    .select('*')
+    .limit(100);
+  if (data) {
+    console.log(data[0]);
+    tableData.value = data;
+  } else {
+    console.error('Fehler beim Abrufen der Daten:', error);
+  }
+});
 
 </script>
 
 <style lang="css" scoped>
+
+#data-table {
+  max-height: 500px;
+}
 </style>
