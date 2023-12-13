@@ -28,7 +28,6 @@ await useAsyncData('data', async () => {
     .select('*')
     .limit(100);
   if (data) {
-    console.log(data[0]);
     tableData.value = data;
   } else {
     console.error('Fehler beim Abrufen der Daten:', error);
