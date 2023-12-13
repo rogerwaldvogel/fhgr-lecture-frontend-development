@@ -30,7 +30,7 @@ await useAsyncData('data', async () => {
   if (data) {
     tableData.value = data;
   } else {
-    console.error('Fehler beim Abrufen der Daten:', error);
+    console.error('Error when fetching the data:', error);
   }
 });
 
