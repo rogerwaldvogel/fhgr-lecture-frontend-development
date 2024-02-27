@@ -4,7 +4,7 @@
     <UCard class="mt-10">
       <template #header>
         <div class="flex justify-between">
-          <h1>Welcome to FHGR Frontend Development Lectures Test</h1>
+          <h1>Welcome to FHGR Frontend Development Lectures</h1>
           <ColorScheme>
             <USelect v-model="$colorMode.preference" :options="['system', 'light', 'dark']"/>
           </ColorScheme>
@@ -19,7 +19,7 @@
   </NuxtLayout>
 </template>
 
-<script setup lang="ts">
+<script setup lang="js">
 const tableData = ref([]);
 const client = useSupabaseClient();
 
