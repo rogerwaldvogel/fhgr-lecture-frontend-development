@@ -1,19 +1,9 @@
 <template>
   <!-- https://nuxt.com/docs/guide/directory-structure/pages -->
   <NuxtLayout name="default-layout">
-    <UCard class="mt-10">
-      <template #header>
-        <div class="flex justify-between">
-          <h1>Welcome to FHGR Frontend Development Lectures</h1>
-          <ColorScheme>
-            <USelect v-model="$colorMode.preference" :options="['system', 'light', 'dark']"/>
-          </ColorScheme>
-        </div>
-      </template>
-      <UButton icon="i-heroicons-book-open" to="https://ui.nuxt.com" target="_blank">Open Nuxt UI Documentation
-      </UButton>
-    </UCard>
-    <UCard class="mt-10">
+    <!-- Komponente benötigt kein import in script. Wird automatisch von nuxt importiert -->
+    <header-example></header-example>
+    <UCard id="data-table-container">
       <UTable id="data-table" :rows="tableData"/>
     </UCard>
   </NuxtLayout>
@@ -25,8 +15,8 @@ const client = useSupabaseClient();
 
 await useAsyncData('data', async () => {
   const {data, error} = await client.from('data')
-    .select('*')
-    .limit(100);
+      .select('*')
+      .limit(100);
   if (data) {
     tableData.value = data;
   } else {
@@ -37,6 +27,10 @@ await useAsyncData('data', async () => {
 </script>
 
 <style lang="css" scoped>
+
+#data-table-container {
+  margin-top: 32px;
+}
 
 #data-table {
   max-height: 500px;
