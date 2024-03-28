@@ -4,25 +4,17 @@
     <!-- Komponente benötigt kein import in script. Wird automatisch von nuxt importiert -->
     <header-example></header-example>
     <UCard id="data-table-container">
-      <UTable id="data-table" :rows="tableData"/>
+      <UTable id="data-table" :rows="store.tableData"/>
     </UCard>
   </NuxtLayout>
 </template>
 
 <script setup lang="js">
-const tableData = ref([]);
-const client = useSupabaseClient();
+import {useWebsiteStore} from "~/stores/website.js";
 
-await useAsyncData('data', async () => {
-  const {data, error} = await client.from('data')
-      .select('*')
-      .limit(100);
-  if (data) {
-    tableData.value = data;
-  } else {
-    console.error('Error when fetching the data:', error);
-  }
-});
+const store = useWebsiteStore()
+
+await callOnce(store.fetchData)
 
 </script>
 

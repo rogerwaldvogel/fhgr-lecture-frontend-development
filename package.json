@@ -9,10 +9,14 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
-  "devDependencies": {
-    "@nuxt/devtools": "latest",
+  "dependencies": {
     "@nuxt/ui": "^2.15.0",
     "nuxt": "^3.11.1",
-    "@nuxtjs/supabase": "^1.1.7"
+    "@nuxtjs/supabase": "^1.1.7",
+    "pinia": "^2.1.7",
+    "@pinia/nuxt": "^0.5.1"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest"
   }
 }
