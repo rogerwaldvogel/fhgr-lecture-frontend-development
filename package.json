@@ -17,6 +17,7 @@
     "@pinia/nuxt": "^0.5.1"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest"
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/google-fonts": "^3.2.0"
   }
 }
