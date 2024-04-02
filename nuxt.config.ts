@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
     devtools: {enabled: true},
     modules: ['@nuxt/ui', '@nuxtjs/supabase', '@pinia/nuxt'],
+    css: ['~/assets/css/main.css'],
     supabase: {
         redirectOptions: {
             login: '/login',
