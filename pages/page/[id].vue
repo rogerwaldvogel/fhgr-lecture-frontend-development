@@ -8,6 +8,18 @@
 
 const route = useRoute()
 
+// Wir können den head auch dynamisch anpassen für eine Seite
+useHead({
+  title: 'My Page',
+  meta: [
+    {name: 'description', content: 'My amazing site.'}
+  ],
+  bodyAttrs: {
+    class: 'test'
+  },
+  script: [{innerHTML: 'console.log(\'Hello student\')'}]
+})
+
 </script>
 
 <style scoped lang="css">

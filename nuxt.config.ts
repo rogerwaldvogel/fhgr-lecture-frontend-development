@@ -17,5 +17,13 @@ export default defineNuxtConfig({
             'Workbench': true,
             Lato: [100, 300],
         }
+    },
+    // Head Elemente welche über die ganze Applikation gültig sind können hier konfiguriert werden.
+    app: {
+        head: {
+            title: 'CDS Frontend',
+            charset: 'utf-8',
+            viewport: 'width=device-width, initial-scale=1',
+        }
     }
 })
