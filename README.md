@@ -31,8 +31,10 @@ https://nuxt.com/docs/guide/directory-structure/env
 ### Supabase 
 
 Description of how to set up and use Supabase.
+https://github.com/Interaktive-Medien/2023_HS_IM3
 
-- https://github.com/Interaktive-Medien/2023_HS_IM3
+The library @nuxtjs/supabase can be used to connect your nuxt project to Supabase.
+https://supabase.nuxtjs.org/get-started
 
 ## Install
 
