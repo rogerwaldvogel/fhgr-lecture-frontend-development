@@ -1,10 +1,40 @@
 # Nuxt UI Minimal Starter
 
+This code serves as a template for the student project.
+
+## Project Structure
+
+Detailed description: https://nuxt.com/docs/getting-started/introduction
+
+### Folders and Files
+https://nuxt.com/docs/guide/directory-structure
+
+- /pages: https://nuxt.com/docs/getting-started/routing
+- /components: https://nuxt.com/docs/guide/directory-structure/components
+- /stores: https://nuxt.com/docs/getting-started/state-management#usage-with-pinia
+- /layouts: https://nuxt.com/docs/guide/directory-structure/layouts
+- /public: https://nuxt.com/docs/getting-started/assets#public-directory
+- /assets: https://nuxt.com/docs/getting-started/assets
+- /server: https://nuxt.com/docs/guide/directory-structure/server
+
+### Configuration Files
+nuxt.config.ts: https://nuxt.com/docs/getting-started/configuration#nuxt-configuration
+app.config.ts: https://nuxt.com/docs/getting-started/configuration#app-configuration
+
+### Environment Variables
+
+Configuration variables can be defined in the .env file. This file should never be checked in. 
+An example was created with .env.example .
+https://nuxt.com/docs/guide/directory-structure/env
 
 
-## Setup
+### Supabase 
 
-### Nuxt
+Description of how to set up and use Supabase.
+
+- https://github.com/Interaktive-Medien/2023_HS_IM3
+
+## Install
 
 Make sure to install the dependencies:
 
@@ -12,15 +42,6 @@ Make sure to install the dependencies:
 # npm
 npm install
 ```
-
-### Supabase 
-
-- Erstelle einen Account bei Supabase `https://supabase.com/dashboard/sign-up`
-- Erstelle ein neues Projekt mit dem Namen `FHGR-Frontend`
-- Finde auf [Kaggle](https://www.kaggle.com/datasets) ein Datenset (CSV File Format), welches du für dein Projekt verwenden möchtest.
-- Klicke auf den Button zum Erstellen einer neuen Tabelle. Verwende für die Tabelle den Namen `data` und importiere das CSV Datenset von Kaggle. Aktivere zudem die Row Level Security (RLS).
-- Wähle eine Column aus welche der Primary Key ist und speichere danach die Tabelle.
-- 
 
 ## Development Server
 
