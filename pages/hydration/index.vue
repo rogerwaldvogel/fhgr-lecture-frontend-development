@@ -5,15 +5,24 @@
     Aktuelle Zeit: {{ new Date().toISOString() }} <br><br>
 
     <p>
-      <p>Hydration Missmatch</p>
+      <p>Hydration Missmatch p element</p>
     </p>
 
-    Wird vom Browser umgewandelt in:
     <pre><code>
+&lt;p&gt;
+    &lt;p&gt;Hydration Missmatch&lt;/p&gt;
+&lt;/p&gt;
+
+Wird vom Browser so umgewandelt
+
 &lt;p&gt;&lt;/p&gt;
 &lt;p&gt;Hydration Missmatch&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
     </code></pre>
+
+    <client-only>
+      Wird nur im Browser gerendert und führt zu keine Hydration Mismatch
+    </client-only>
   </NuxtLayout>
 </template>
 
