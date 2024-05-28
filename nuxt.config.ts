@@ -27,5 +27,5 @@ export default defineNuxtConfig({
         }
     },
     // Activate/Deactivate Server Side Rendering
-    ssr: false,
+    ssr: true,
 })
